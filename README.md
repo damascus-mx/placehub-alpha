@@ -1,6 +1,5 @@
-# PlacehubWeb
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+# Placehub Alpha
+Damascus's placehub alpha SPA webapp. Made with Angular.
 
 ## Development server
 
