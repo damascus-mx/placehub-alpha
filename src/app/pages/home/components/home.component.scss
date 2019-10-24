@@ -1,0 +1,126 @@
+@import 'src/assets/styles/scss/placehub.scss';
+@include mat-core();
+
+$gray: mat-color(mat-palette($mat-gray, 900));
+
+.wrapper {
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    flex-flow: column;
+}
+
+.stories-wrapper {
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+
+    * {
+        width: inherit;
+    }
+}
+
+.main-content {
+    width: 100%;
+    .top-places {
+        width: inherit;
+    
+        .swiper {
+            width: inherit;
+            height: 400px;
+            background: $gray;
+            
+            border-radius: 16px;
+        }
+    }
+}
+
+
+
+.stories-wrapper-desktop {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+}
+
+/* Desktop */
+@media (min-width: 1280px) and (min-height: 720px) {
+    .stories-wrapper {
+        display: none;
+    }
+
+    .stories-wrapper-desktop {
+        display: flex;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    
+        padding: 24px 0;
+        border-radius: 16px;
+        border: 1px solid rgba($color: $gray, $alpha: 0.12);
+        width: 100%;
+        height: max-content;
+        max-height: max-content;
+        overflow: hidden;
+    
+        * {
+            width: 100%;
+        }
+    }
+
+    .wrapper {
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    .sidebar {
+        display: flex;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-flow: column;
+
+        width: 30%;
+        max-width: 30%;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .main-content {
+        width: 65%;
+        max-width: 65%;
+        height: 100%;
+        max-height: 100%;
+
+        overflow: auto;
+        scrollbar-width: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) { 
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width : 1279px) {
+}
+
+/* Modern big smartphones */
+@media (min-width: 550px) and (max-width: 750px) and (max-height: 450px) and (orientation: landscape) {
+}

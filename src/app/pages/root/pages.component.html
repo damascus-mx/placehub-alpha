@@ -1,0 +1,58 @@
+<div class="wrapper">
+    <div class="app-bar mat-app-background" #navbar>
+        <a routerLink="/" style="padding: 0 0 0 16px;"><p>place<span>hub</span></p></a>
+        <div class="search-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search a place" [(ngModel)]="searchInput">
+                <button mat-icon-button *ngIf="searchInput" matSuffix mat-icon-button aria-label="Clear" (click)="searchInput=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-icon fontSet="material-icons-outlined" matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="action-container">
+            <div class="item">
+                <button mat-icon-button routerLink="/explore" routerLinkActive="active-link"><mat-icon fontSet="material-icons-outlined">explore</mat-icon></button>
+            </div>
+            <div class="item">
+                <button mat-icon-button routerLink="/offers" routerLinkActive="active-link"><mat-icon fontSet="material-icons-outlined">local_offer</mat-icon></button>
+            </div>
+            <div class="item">
+                <button mat-icon-button routerLink="/notifications" routerLinkActive="active-link"><mat-icon fontSet="material-icons-outlined">notifications</mat-icon></button>
+            </div>
+            <div class="item">
+                <button mat-icon-button routerLink="/profile" routerLinkActive="active-link"><mat-icon fontSet="material-icons-outlined">account_circle</mat-icon></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-mobile-container animated fast mat-app-background mat-elevation-z4 disabled" #search>
+        <mat-form-field appearance="outline">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Search a place" [(ngModel)]="searchInput">
+            <button mat-icon-button *ngIf="searchInput" matSuffix mat-icon-button aria-label="Clear" (click)="searchInput=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <mat-icon fontSet="material-icons-outlined" matSuffix>search</mat-icon>
+        </mat-form-field>
+        <button mat-icon-button color="accent" (click)="onSearch()"><mat-icon fontSet="material-icons-outlined">close</mat-icon></button>
+    </div>
+
+    <div class="app-bar-mobile mat-app-background" #appbar_mb>
+        <a routerLink="/" style="padding-left: 16px;"><p>place<span>hub</span></p></a>
+        <div style="padding-right: 16px;">
+            <button mat-icon-button color="accent" (click)="onSearch()">
+                <mat-icon fontSet="material-icons-outlined">search</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="nav-container" >
+        <app-navbar></app-navbar>
+    </div>
+</div>

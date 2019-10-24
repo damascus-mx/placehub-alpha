@@ -24,7 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/assets/styles/scss/placehub.scss",
+              "./node_modules/swiper/css/swiper.min.css",
+              "src/assets/styles/scss/styles.scss"
             ],
             "scripts": []
           },
@@ -89,7 +92,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/assets/styles/scss/placehub.scss",
+              "./node_modules/swiper/css/swiper.min.css",
+              "src/assets/styles/scss/styles.scss"
             ],
             "scripts": []
           }
@@ -120,6 +126,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "placehub-web"
+    }
+  },
+  "defaultProject": "placehub-web",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

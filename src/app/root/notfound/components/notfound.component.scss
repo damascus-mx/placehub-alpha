@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}

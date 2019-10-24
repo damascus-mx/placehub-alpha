@@ -1,0 +1,26 @@
+@import 'src/assets/styles/scss/placehub.scss';
+@include mat-core();
+
+$gray: mat-color(mat-palette($mat-gray, 400));
+
+.nav-bar {
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    z-index: 1;
+
+    border-top: 1px solid rgba($color: $gray, $alpha: 0.12);
+}
+
+.active-link {
+    mat-icon {
+        font-family: 'Material Icons';
+        color: initial;
+    }
+}

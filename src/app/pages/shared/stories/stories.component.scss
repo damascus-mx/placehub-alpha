@@ -1,0 +1,82 @@
+@import 'src/assets/styles/scss/placehub.scss';
+@include mat-core();
+
+$gray: mat-color(mat-palette($mat-gray, 300));
+$dark-gray: mat-color(mat-palette($mat-gray, 400));
+
+$base-color: $gray;
+$shine-color: rgba($color: $dark-gray, $alpha: 0.3);
+$animation-duration: 2000ms;
+
+@mixin background-gradient {
+  background-image: linear-gradient(90deg, $base-color 0px, $shine-color 40px, $base-color 80px); 
+  background-size: 600px;
+}
+
+.story-slide{
+    max-width: max-content;
+    max-width: -moz-max-content;
+    margin: 0 10px;
+
+    .story {
+        display: flex;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        justify-content: center;
+        align-items: center;
+    
+        height: 72px;
+        width: 72px;
+        border-radius: 100%;
+        background: rgba($color: #fff, $alpha: 0);
+        border: 3px solid $primary;
+    
+        padding: 4px;
+    
+        img {
+            width: 72px;
+            height: 72px;
+    
+            border-radius: 100%;
+            transition: ease-in 200ms;
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-slide {
+    width: auto;
+}
+
+/* Misc */
+.loading {
+    position: absolute;
+    background: $gray;
+    height: 72px;
+    width: 72px;
+    border-radius: 100%;
+    transition: 0.2s;
+
+    @include background-gradient;
+    animation: shine-lines $animation-duration infinite ease-out;
+}
+
+.loading-end {
+    transition: 0.2s;
+    animation: ease-in;
+}
+
+@keyframes shine-lines {
+    0% {
+        background-position: -100px
+    }
+  
+    40%, 100% {
+        background-position: 140px
+    }
+}
+
