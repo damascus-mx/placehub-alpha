@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatBottomSheet } from '@angular/material';
+import { ProfileSheetComponent } from '../profile-sheet/profile-sheet.component';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private profileSheet: MatBottomSheet) { }
 
   ngOnInit() {
+  }
+
+  onProfile() {
+    this.profileSheet.open(ProfileSheetComponent);
   }
 
 }

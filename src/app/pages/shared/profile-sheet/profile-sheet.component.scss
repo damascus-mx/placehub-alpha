@@ -1,0 +1,12 @@
+.action-container {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+
+    align-items: center;
+
+    .content {
+        margin: 0 4px;
+    }
+}

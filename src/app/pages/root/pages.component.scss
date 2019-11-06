@@ -24,19 +24,23 @@ $gray: mat-color(mat-palette($mat-gray, 700));
 
         flex-flow: row wrap;
         justify-content: space-evenly;
-        align-items: baseline;
+        align-items: center;
 
         width: 100%;
         position: fixed;
         z-index: 999;
 
-        border-radius: 0 0 16px 16px;
+        border-radius: 0 0 0 24px;
 
         .mat-form-field {
             font-size: 14px;
 
             padding: 4px 16px;
             width: 70%;
+
+            ::ng-deep .mat-form-field-wrapper {
+                padding-bottom: 8px !important;
+            }
         }
     }
     
@@ -84,19 +88,10 @@ $gray: mat-color(mat-palette($mat-gray, 700));
     }
 }
 
-.app-container {
-    padding: 100px 0 80px 0;
-}
-
-
 /* Desktop */
 @media (min-width: 1280px) and (min-height: 720px) {
     .nav-container, .app-bar-mobile, .search-mobile-container {
         display: none !important;
-    }
-
-    .app-container {
-        padding: 100px 0;
     }
 
     .wrapper {
@@ -138,6 +133,22 @@ $gray: mat-color(mat-palette($mat-gray, 700));
                 align-items: center;
 
                 padding: 0 16px 0 0;
+
+                .item {
+                    .profile-container {
+                        display: flex;
+                        display: -moz-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            margin-right: 8px;
+                        }
+                    }
+                }
             }
     
             .mat-form-field {

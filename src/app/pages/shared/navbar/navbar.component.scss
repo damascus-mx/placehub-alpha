@@ -21,6 +21,6 @@ $gray: mat-color(mat-palette($mat-gray, 400));
 .active-link {
     mat-icon {
         font-family: 'Material Icons';
-        color: initial;
+        color: inherit;
     }
 }

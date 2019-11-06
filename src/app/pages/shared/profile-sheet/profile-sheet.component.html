@@ -1,0 +1,28 @@
+<mat-nav-list>
+    <a routerLink="/account" mat-list-item (click)="openLink($event)">
+        <span mat-line><b>Account</b></span>
+        <span mat-line>See your profile</span>
+    </a>
+    
+    <a href="https://docs.google.com/" mat-list-item (click)="openLink($event)">
+        <span mat-line>Google Docs</span>
+        <span mat-line>Embed in a document</span>
+    </a>
+    
+    <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+        <span mat-line>Google Plus</span>
+        <span mat-line>Share with your friends</span>
+    </a>
+    
+    <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)" class="danger-action">
+        <div class="action-container">
+            <div>
+                <mat-icon fontSet="material-icons-outlined">exit_to_app</mat-icon>
+            </div>
+            <div class="content">
+                <span mat-line><b>Log Out</b></span>
+                <span mat-line>Exit placehub</span>
+            </div>
+        </div>
+    </a>
+</mat-nav-list>    

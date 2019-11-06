@@ -14,6 +14,7 @@ $gray: mat-color(mat-palette($mat-gray, 900));
     align-items: flex-start;
 
     flex-flow: column;
+    padding: 100px 0 80px 0;
 }
 
 .stories-wrapper {
@@ -58,6 +59,10 @@ $gray: mat-color(mat-palette($mat-gray, 900));
 
 /* Desktop */
 @media (min-width: 1280px) and (min-height: 720px) {
+    .wrapper {
+        padding: 100px 0 0 0;
+    }
+
     .stories-wrapper {
         display: none;
     }
@@ -74,7 +79,7 @@ $gray: mat-color(mat-palette($mat-gray, 900));
         padding: 24px 0;
         border-radius: 16px;
         border: 1px solid rgba($color: $gray, $alpha: 0.12);
-        width: 100%;
+        width: 80%;
         height: max-content;
         max-height: max-content;
         overflow: hidden;
@@ -95,18 +100,19 @@ $gray: mat-color(mat-palette($mat-gray, 900));
         display: -webkit-flex;
         display: -ms-flexbox;
         flex-flow: column;
+        overflow: hidden;
 
         width: 30%;
         max-width: 30%;
-        height: 100%;
-        max-height: 100%;
+        height: 100vh;
+        max-height: 100vh;
     }
 
     .main-content {
-        width: 65%;
-        max-width: 65%;
-        height: 100%;
-        max-height: 100%;
+        width: 70%;
+        max-width: 70%;
+        height: 100vh;
+        max-height: 100vh;
 
         overflow: auto;
         scrollbar-width: none;

@@ -1,4 +1,6 @@
 import {  Component, OnInit, ViewChild, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { MatBottomSheet } from '@angular/material';
+import { ProfileSheetComponent } from '../shared/profile-sheet/profile-sheet.component';
 
 @Component({
   selector: 'app-pages',
@@ -11,18 +13,22 @@ export class PagesComponent implements OnInit {
   searchInput: string;
   openSearch = false;
 
-  constructor(private render: Renderer2) {
+  constructor(private render: Renderer2, private profileSheet: MatBottomSheet) {
   }
 
   ngOnInit() {
+  }
+
+  onProfile(): void {
+    this.profileSheet.open(ProfileSheetComponent);
   }
 
   onSearch(): void {
     if ( this.openSearch ) {
       this.openSearch = false;
 
-      this.render.removeClass(this.search.nativeElement, 'slideInDown');
-      this.render.addClass(this.search.nativeElement, 'slideOutUp');
+      this.render.removeClass(this.search.nativeElement, 'slideInRight');
+      this.render.addClass(this.search.nativeElement, 'slideOutRight');
 
       this.render.removeClass(this.search.nativeElement, 'enabled');
     } else {
@@ -31,8 +37,8 @@ export class PagesComponent implements OnInit {
       this.render.removeClass(this.search.nativeElement, 'disabled');
       this.render.addClass(this.search.nativeElement, 'enabled');
 
-      this.render.removeClass(this.search.nativeElement, 'slideOutUp');
-      this.render.addClass(this.search.nativeElement, 'slideInDown');
+      this.render.removeClass(this.search.nativeElement, 'slideOutRight');
+      this.render.addClass(this.search.nativeElement, 'slideInRight');
     }
   }
 

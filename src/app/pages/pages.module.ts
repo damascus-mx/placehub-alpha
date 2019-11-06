@@ -5,16 +5,18 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './root/pages.component';
 import { MaterialModule } from '../common/modules/material.module';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { ProfileSheetComponent } from './shared/profile-sheet/profile-sheet.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, NavbarComponent],
+  declarations: [PagesComponent, NavbarComponent, ProfileSheetComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
     MaterialModule,
   ],
   entryComponents: [
+    ProfileSheetComponent
   ]
 })
 export class PagesModule { }
