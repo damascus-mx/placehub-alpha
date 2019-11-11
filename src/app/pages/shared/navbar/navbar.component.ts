@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   constructor(private profileSheet: MatBottomSheet, private router: Router) {
     this.isHome = (this.router.url === '/') ? true : false;
-    this.isProfile = (this.router.url === '/account') ? true : false;
+    this.isProfile = (this.router.url.startsWith('/account')) ? true : false;
   }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.events.pipe(takeUntil(this.subject$), filter(event => event instanceof NavigationStart))
         .subscribe((e: NavigationStart) => {
           this.isHome = (e.url === '/') ? true : false;
-          this.isProfile = (e.url === '/account') ? true : false;
+          this.isProfile = (e.url.startsWith('/account')) ? true : false;
         });
   }
 

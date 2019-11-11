@@ -1,12 +1,10 @@
-import {  Component, OnInit, ViewChild, ElementRef, HostListener, Renderer2, AfterViewInit, InjectionToken, OnDestroy } from '@angular/core';
+import {  Component, OnInit, ViewChild, ElementRef, HostListener, Renderer2, InjectionToken, OnDestroy } from '@angular/core';
 import { MatBottomSheet } from '@angular/material';
 import { ProfileSheetComponent } from '../shared/profile-sheet/profile-sheet.component';
-import { ComponentPortal } from '@angular/cdk/portal';
-import { SearchbarComponent } from '../shared/searchbar/searchbar.component';
-import { Overlay, OverlayRef } from '@angular/cdk/overlay';
-import { Subject, pipe } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { takeUntil, filter } from 'rxjs/operators';
 import { SearchbarOverlayService } from '../shared/searchbar/searchbar.service';
+import { Router, NavigationStart } from '@angular/router';
 
 export const PORTAL_DATA = new InjectionToken<{}>('PortalData');
 
@@ -15,14 +13,26 @@ export const PORTAL_DATA = new InjectionToken<{}>('PortalData');
   templateUrl: './pages.component.html',
   styleUrls: ['./pages.component.scss']
 })
-export class PagesComponent implements OnInit {
+export class PagesComponent implements OnInit, OnDestroy {
   @ViewChild('navbar', {static: false}) navbar: ElementRef;
+  private subject$ = new Subject<void>();
+  isProfile = '';
 
   constructor(private render: Renderer2, private profileSheet: MatBottomSheet,
-              private searchOverlay: SearchbarOverlayService) {
+              private searchOverlay: SearchbarOverlayService, private router: Router) {
+    this.isProfile = (this.router.url.startsWith('/account')) ? 'primary' : '';
   }
 
   ngOnInit() {
+    this.router.events.pipe(takeUntil(this.subject$), filter(event => event instanceof NavigationStart))
+        .subscribe((e: NavigationStart) => {
+          this.isProfile = (e.url.startsWith('/account')) ? 'primary' : '';
+        });
+  }
+
+  ngOnDestroy(): void {
+    this.subject$.next();
+    this.subject$.complete();
   }
 
   onProfile(): void {

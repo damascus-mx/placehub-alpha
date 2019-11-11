@@ -9,7 +9,9 @@
         <button mat-icon-button routerLink="/offers" routerLinkActive="active-link"><mat-icon fontSet="material-icons-outlined">local_offer</mat-icon></button>
     </div>
     <div class="item">
-        <button mat-icon-button routerLink="/notifications" routerLinkActive="active-link"><mat-icon fontSet="material-icons-outlined">notifications</mat-icon></button>
+        <button mat-icon-button routerLink="/notifications" routerLinkActive="active-link">
+            <mat-icon fontSet="material-icons-outlined" matBadge="9+" matBadgeColor="warn">notifications</mat-icon>
+        </button>
     </div>
     <div class="item">
         <button mat-icon-button (click)="onProfile()" [ngClass]="(isProfile)?'active-link': ''">
