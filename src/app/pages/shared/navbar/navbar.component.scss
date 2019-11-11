@@ -23,4 +23,9 @@ $gray: mat-color(mat-palette($mat-gray, 400));
         font-family: 'Material Icons';
         color: inherit;
     }
+
+    img {
+        border: 1.7px solid;
+        padding: 2px;
+    }
 }

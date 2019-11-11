@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { MatBottomSheet } from '@angular/material';
 import { ProfileSheetComponent } from '../profile-sheet/profile-sheet.component';
-import { Router, Event, NavigationStart } from '@angular/router';
+import { Router, NavigationStart } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
 
@@ -13,9 +13,11 @@ import { takeUntil, filter } from 'rxjs/operators';
 export class NavbarComponent implements OnInit, OnDestroy {
   private subject$ = new Subject<void>();
   isHome = false;
+  isProfile = false;
 
   constructor(private profileSheet: MatBottomSheet, private router: Router) {
     this.isHome = (this.router.url === '/') ? true : false;
+    this.isProfile = (this.router.url === '/account') ? true : false;
   }
 
   ngOnInit() {
@@ -23,6 +25,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.events.pipe(takeUntil(this.subject$), filter(event => event instanceof NavigationStart))
         .subscribe((e: NavigationStart) => {
           this.isHome = (e.url === '/') ? true : false;
+          this.isProfile = (e.url === '/account') ? true : false;
         });
   }
 

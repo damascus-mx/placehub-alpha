@@ -14,8 +14,8 @@ export class ProfileSheetComponent implements OnInit {
   }
 
   openLink(event: MouseEvent): void {
-    /*this.bottomSheetRef.dismiss();
-    event.preventDefault();*/
+    this.bottomSheetRef.dismiss();
+    /*event.preventDefault();*/
   }
 
 }
