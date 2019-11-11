@@ -3,6 +3,14 @@
 
 $gray: mat-color(mat-palette($mat-gray, 900));
 
+.ph-content {
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+}
+
 .wrapper {
     display: flex;
     display: -moz-box;
@@ -34,8 +42,26 @@ $gray: mat-color(mat-palette($mat-gray, 900));
 .main-content {
     width: 100%;
     .top-places {
-        width: inherit;
-    
+        margin: 16px;
+        white-space: nowrap;
+        max-width: 100%;
+        
+        display: flex;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction: column;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        h1 {
+            display: inline-block;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         .swiper {
             width: inherit;
             height: 400px;
@@ -56,15 +82,23 @@ $gray: mat-color(mat-palette($mat-gray, 900));
     display: none;
 }
 
-/* Desktop */
-@media (min-width: 1280px) and (min-height: 720px) {
+/* Desktop and tablets landscape */
+@media (min-height: 720px) and (min-width: 835px) {
     .wrapper {
         padding: 0;
         height: 100vh;
+
+        width: 72%;
+        max-width: 1000px;
+        align-self: center;
     }
 
     .stories-wrapper {
         display: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 
     .stories-wrapper-desktop {
@@ -76,16 +110,23 @@ $gray: mat-color(mat-palette($mat-gray, 900));
         align-items: center;
         flex-flow: column;
     
-        padding: 24px 0;
-        border-radius: 16px;
+        padding: 10px 0 24px 0;
+        border-radius: 8px;
         border: 1px solid rgba($color: $gray, $alpha: 0.12);
-        width: 80%;
+        width: 100%;
         height: max-content;
         max-height: max-content;
         overflow: hidden;
     
         * {
             width: 100%;
+        }
+
+        small {
+            margin: 0;
+            padding: 0 0 16px 16px;
+            font-weight: 700;
+            font-size: large;
         }
     }
 
@@ -102,16 +143,38 @@ $gray: mat-color(mat-palette($mat-gray, 900));
         flex-flow: column;
         overflow: hidden;
 
-        width: 30%;
-        max-width: 30%;
+        width: 35%;
+        max-width: 35%;
         height: 90vh;
         max-height: 90vh;
         padding-top: 10vh;
+
+        .container {
+            margin: 16px 0 0 0;
+        }
+
+        .footer-wrapper {
+            display: flex;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            flex-flow: column wrap;
+
+            padding: 4px 8px;
+
+            * {
+                color: rgba($color: $gray, $alpha: 0.5);
+            }
+
+            .useful-links {
+                text-align: center;
+            }
+        }
     }
 
     .main-content {
-        width: 70%;
-        max-width: 70%;
+        width: 50%;
+        max-width: 50%;
         height: 90vh;
         max-height: 90vh;
         padding-top: 10vh;

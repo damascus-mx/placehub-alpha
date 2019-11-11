@@ -5,7 +5,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
 
 .wrapper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     display: -moz-box;
     display: -webkit-flex;
@@ -15,6 +15,10 @@ $gray: mat-color(mat-palette($mat-gray, 700));
     padding: 0;
     flex-flow: column;
     z-index: -1;
+
+    .app-container {
+        height: 100%;
+    }
     
     .app-bar-mobile {
         display: flex;
@@ -62,7 +66,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
 }
 
 .navbar-alt {
-    border-bottom: 1.5px solid rgba(97, 97, 97, 0.12);
+    border-bottom: 1px solid rgba(97, 97, 97, 0.12);
 
     a {
         p {
@@ -73,7 +77,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
 }
 
 /* Desktop */
-@media (min-width: 1280px) and (min-height: 720px) {
+@media (min-height: 720px) and (min-width: 835px) {
     .nav-container, .app-bar-mobile, .search-mobile-container {
         display: none !important;
     }
@@ -107,7 +111,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
             }
 
             .search-container {
-                width: 30%;
+                width: 24%;
             }
     
             .action-container {
@@ -120,7 +124,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
                 justify-content: space-around;
                 align-items: center;
 
-                padding: 0 16px 0 0;
+                padding-right: 15%;
 
                 .item {
                     .profile-container {
@@ -163,7 +167,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
 }
 
 /* Tablets */
-@media (min-width: 768px) and (max-width : 1279px) {
+@media (min-width: 768px) and (max-width : 1000px) {
     .app-bar {
         display: none !important;
     }

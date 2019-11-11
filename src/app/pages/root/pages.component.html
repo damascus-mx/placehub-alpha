@@ -4,7 +4,7 @@
     <div class="app-bar mat-app-background animated slideInDown">
 
         <!-- Title -->
-        <a routerLink="/" style="padding: 0 0 0 16px;"><p>place<span>hub</span></p></a>
+        <a routerLink="/" style="padding-left: 15%;"><p>place<span>hub</span></p></a>
 
         <!-- Searchbar -->
         <div class="search-container">
@@ -28,7 +28,7 @@
             <div class="item">
                 <button (click)="onProfile()" mat-button class="profile-container">
                     <img src="https://profile-images.scdn.co/images/userprofile/default/118067949e41c82b389c6aa831ee2c28364f3e49" height="24" width="24" alt="PP" style="border-radius: 100%;">
-                    <span>Alonso</span>
+                    <small>Alonso</small>
                 </button>
             </div>
         </div>
@@ -45,7 +45,7 @@
     </div>
 
     <!-- App -->
-    <div class="app-container animated fadeIn">
+    <div class="app-container">
         <router-outlet></router-outlet>
     </div>
 

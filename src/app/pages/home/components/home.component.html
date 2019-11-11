@@ -1,38 +1,57 @@
-<div class="wrapper">
-    <div class="stories-wrapper">
-        <app-stories></app-stories>
-        <mat-divider style="margin-top: 10px;"></mat-divider>
-    </div>
-    <div class="main-content">
-        <div class="body-container" >
+<div class="ph-content">
+    <div class="wrapper">
+        <!-- Mobile stories wrapper -->
+        <div class="stories-wrapper">
+            <app-stories></app-stories>
+            <mat-divider style="margin-top: 10px;"></mat-divider>
+        </div>
+    
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Top places -->
             <div class="top-places">
-                <div class="container">
-                    <h1 style="margin-top: 0;">Top places</h1>
-                    <div class="swiper" >
-                    </div>
-                </div>
+                <h1 style="margin-top: 0;">Top places</h1>
+                <div class="swiper"></div>
             </div>
+    
+            <!-- Top places -->
             <div class="top-places">
-                <div class="container">
-                    <h1>Top places</h1>
-                    <div class="swiper" >
-                    </div>
-                </div>
+                <h1 style="margin-top: 0;">Your favorite places</h1>
+                <div class="swiper"></div>
             </div>
+    
+            <!-- Top places -->
             <div class="top-places">
-                <div class="container">
-                    <h1>Top places</h1>
-                    <div class="swiper" >
-                    </div>
-                </div>
+                <h1 style="margin-top: 0;">Recommended for you</h1>
+                <div class="swiper"></div>
+            </div>
+    
+            <!-- Top places -->
+            <div class="top-places">
+                <h1 style="margin-top: 0;">Top places</h1>
+                <div class="swiper"></div>
             </div>
         </div>
-    </div>
-    <div class="sidebar">
-        <div class="container">
-            <h2 style="margin-top: 10px;">Stories</h2>
-            <div class="stories-wrapper-desktop">
-                <app-stories></app-stories>
+    
+        <!-- Desktop stories wrapper -->
+        <div class="sidebar">
+            <div class="container">
+                <div class="stories-wrapper-desktop" style="margin-top: 10px;">
+                    <small>Stories</small>
+                    <app-stories></app-stories>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="useful-links">
+                    <small><a [routerLink]="['/about/business']">Placehub for Business</a></small> ·
+                    <small><a [routerLink]="['/about/developers']">Developers</a></small> ·
+                    <small><a [routerLink]="['/about/jobs']">Careers</a></small> ·
+                    <small><a [routerLink]="['/about']">Information</a></small> ·
+                    <small><a [routerLink]="['/about/ads']">Ads</a></small> ·
+                    <small><a [routerLink]="['/about/privacy']">Privacy</a></small> ·
+                    <small><a [routerLink]="['/docs/conditions']">Conditions</a></small>
+                </div>
+                <div style="text-align: center; padding: 8px 0;"><small><b>&copy; 2019 Placehub</b></small></div>
             </div>
         </div>
     </div>
