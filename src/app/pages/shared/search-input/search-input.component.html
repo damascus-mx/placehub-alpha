@@ -1,0 +1,25 @@
+<form class="search-form" action="post"  (onsubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <mat-icon *ngIf="mobile" fontSet="material-icons-outlined" matPrefix>search</mat-icon>
+        <input matInput placeholder="Search a place" tabindex="0" name="keyword" [matAutocomplete]="auto" [formControl]="keywordCtrl" (keyup.enter)="onSubmit()"
+        (keyup)="onSubmit($event.key)" maxlength="256">
+        <button mat-icon-button *ngIf="keywordCtrl.value" matSuffix mat-icon-button aria-label="X" class="animated fadeIn fast" (click)="keywordCtrl.setValue('')" type="button">
+            <mat-icon>close</mat-icon>
+        </button>
+        <mat-icon *ngIf="!mobile" fontSet="material-icons-outlined" matSuffix>search</mat-icon>
+
+        <mat-hint align="end" *ngIf="keywordCtrl.value" style="padding-top: 8px;" class="animated fadeIn fast">{{keywordCtrl.value.length}} / 256</mat-hint>
+
+        <!-- Autocomplete -->
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let place of filteredPlaces | async" [value]="place.name" (click)="onSelectPlace(place.username)">
+                <img class="place-img" [ngClass]="(place.story === true)?'story-enabled':'story-disabled'" aria-hidden [src]="place.image" height="24" width="24">
+                <span>{{place.name}}</span> |
+                <small>Followers: {{place.followers}}</small>
+            </mat-option>
+        </mat-autocomplete>
+
+        <input type="submit" hidden aria-hidden tabindex="3">
+    </mat-form-field>
+</form>

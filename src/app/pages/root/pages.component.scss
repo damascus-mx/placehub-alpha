@@ -15,34 +15,6 @@ $gray: mat-color(mat-palette($mat-gray, 700));
     padding: 0;
     flex-flow: column;
     z-index: -1;
-
-    .search-mobile-container {
-        display: flex;
-        display: -moz-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: center;
-
-        width: 100%;
-        position: fixed;
-        z-index: 999;
-
-        border-radius: 0 0 0 24px;
-
-        .mat-form-field {
-            font-size: 14px;
-
-            padding: 4px 16px;
-            width: 70%;
-
-            ::ng-deep .mat-form-field-wrapper {
-                padding-bottom: 8px !important;
-            }
-        }
-    }
     
     .app-bar-mobile {
         display: flex;
@@ -63,6 +35,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             font-size: 1.7em;
+            transition: ease 0.35s;
 
             span {
                 color: $primary;
@@ -85,6 +58,17 @@ $gray: mat-color(mat-palette($mat-gray, 700));
     mat-icon {
         font-family: 'Material Icons';
         color: initial;
+    }
+}
+
+.navbar-alt {
+    border-bottom: 1.5px solid rgba(97, 97, 97, 0.12);
+
+    a {
+        p {
+            margin: 8px 0 !important;
+            transition: ease-in 0.35s;
+        }
     }
 }
 
@@ -120,6 +104,10 @@ $gray: mat-color(mat-palette($mat-gray, 700));
                 span {
                     color: $primary;
                 }
+            }
+
+            .search-container {
+                width: 30%;
             }
     
             .action-container {

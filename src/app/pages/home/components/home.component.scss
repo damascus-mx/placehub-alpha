@@ -9,7 +9,6 @@ $gray: mat-color(mat-palette($mat-gray, 900));
     display: -webkit-flex;
     display: -ms-flexbox;
     width: 100%;
-    height: 100%;
     justify-content: flex-start;
     align-items: flex-start;
 
@@ -60,7 +59,8 @@ $gray: mat-color(mat-palette($mat-gray, 900));
 /* Desktop */
 @media (min-width: 1280px) and (min-height: 720px) {
     .wrapper {
-        padding: 100px 0 0 0;
+        padding: 0;
+        height: 100vh;
     }
 
     .stories-wrapper {
@@ -104,18 +104,24 @@ $gray: mat-color(mat-palette($mat-gray, 900));
 
         width: 30%;
         max-width: 30%;
-        height: 100vh;
-        max-height: 100vh;
+        height: 90vh;
+        max-height: 90vh;
+        padding-top: 10vh;
     }
 
     .main-content {
         width: 70%;
         max-width: 70%;
-        height: 100vh;
-        max-height: 100vh;
+        height: 90vh;
+        max-height: 90vh;
+        padding-top: 10vh;
 
         overflow: auto;
         scrollbar-width: none;
+    }
+
+    .main-content::-webkit-scrollbar {
+        display: none;
     }
 }
 

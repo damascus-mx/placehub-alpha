@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home.component';
 import { StoriesComponent } from '../shared/stories/stories.component';
 import { MaterialModule } from 'src/app/common/modules/material.module';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MaterialModule } from 'src/app/common/modules/material.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ScrollingModule
   ]
 })
 export class HomeModule { }

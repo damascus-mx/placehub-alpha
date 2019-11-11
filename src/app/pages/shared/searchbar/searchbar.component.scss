@@ -1,0 +1,25 @@
+@import 'src/assets/styles/scss/placehub.scss';
+
+.search-mobile-container {
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+
+    border-radius: 0 0 24px 24px;
+    padding: 8px 0;
+
+    animation-duration: 0.3s !important;
+
+    * {
+        max-width: 90%;
+    }
+}

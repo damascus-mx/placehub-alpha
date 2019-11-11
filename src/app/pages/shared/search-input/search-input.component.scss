@@ -1,0 +1,40 @@
+@import 'src/assets/styles/scss/placehub.scss';
+
+.search-form {
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+
+    .mat-form-field {
+        font-size: 14px;
+    
+        padding: 4px 16px;
+        width: 100%;
+    
+        ::ng-deep .mat-form-field-wrapper {
+            padding-bottom: 8px !important;
+        }
+    }
+}
+
+.place-img {
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 100%;
+    padding: 2px;
+    background: transparent;
+}
+
+.story-enabled {
+    border: 2px solid $primary;
+}
+
+.story-disabled {
+    padding: 4px;
+}
+
+[dir='rtl'] .place-img {
+    margin-right: 0;
+    margin-left: 8px;
+}
