@@ -56,6 +56,10 @@ a { text-decoration: none; color: inherit; }
     font: inherit !important;
 }
 
+/* Card */
+.mat-card {
+    border-radius: 16px !important;
+}
 
 /* Search bar */
 ::ng-deep .search-form >  .mat-form-field-appearance-outline .mat-form-field-infix { padding: 0.4em 0px;}
