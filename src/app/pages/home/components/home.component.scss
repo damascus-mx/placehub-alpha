@@ -41,7 +41,7 @@ $gray: mat-color(mat-palette($mat-gray, 900));
 
 .main-content {
     width: 100%;
-    .top-places {
+    .ph-lg-swiper {
         margin: 16px;
         white-space: nowrap;
         max-width: 100%;
@@ -55,16 +55,82 @@ $gray: mat-color(mat-palette($mat-gray, 900));
         text-overflow: ellipsis;
         overflow: hidden;
 
-        h1 {
+        h2 {
             display: inline-block;
             flex-grow: 1;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            font-size: 2em;
         }
 
-        .swiper {
+        .swiper-wrapper {
             width: inherit;
             height: 400px;
+            background: $primary;
+            
+            border-radius: 16px;
+        }
+    }
+
+    .ph-sm-swiper {
+        margin: 16px;
+        white-space: nowrap;
+        max-width: 100%;
+        
+        display: flex;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction: column;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        h2 {
+            display: inline-block;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            font-size: 2em;
+        }
+
+        .swiper-wrapper {
+            width: inherit;
+            height: 200px;
+            background: $accent;
+            
+            border-radius: 16px;
+        }
+    }
+
+    .ph-md-swiper {
+        margin: 16px;
+        white-space: nowrap;
+        max-width: 100%;
+        
+        display: flex;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction: column;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        h2 {
+            display: inline-block;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            font-size: 2em;
+        }
+
+        .swiper-wrapper {
+            width: inherit;
+            height: 270px;
             background: $gray;
             
             border-radius: 16px;

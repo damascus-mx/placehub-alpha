@@ -25,7 +25,7 @@ $gray: mat-color(mat-palette($mat-gray, 400));
     }
 
     img {
-        border: 1.7px solid;
+        border: 1.7px solid $primary;
         padding: 2px;
     }
 }
