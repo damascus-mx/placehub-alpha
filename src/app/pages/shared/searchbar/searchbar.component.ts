@@ -31,7 +31,7 @@ export class SearchbarComponent implements OnInit, AfterViewInit, OnDestroy {
     this.dialogRef.close();
   }
 
-  @HostListener('document:keydown', ['$event']) private handleKeydown(event: KeyboardEvent) {
+  @HostListener('document:keydown', ['$event']) handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Escape') {
       this.dialogRef.close();
     }
