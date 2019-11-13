@@ -1,12 +1,10 @@
-import {  Component, OnInit, ViewChild, ElementRef, HostListener, Renderer2, InjectionToken, OnDestroy } from '@angular/core';
+import {  Component, OnInit, ViewChild, ElementRef, HostListener, Renderer2, OnDestroy } from '@angular/core';
 import { MatBottomSheet } from '@angular/material';
 import { ProfileSheetComponent } from '../shared/profile-sheet/profile-sheet.component';
 import { Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
 import { SearchbarOverlayService } from '../shared/searchbar/searchbar.service';
 import { Router, NavigationStart } from '@angular/router';
-
-export const PORTAL_DATA = new InjectionToken<{}>('PortalData');
 
 @Component({
   selector: 'app-pages',

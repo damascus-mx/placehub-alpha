@@ -66,8 +66,6 @@ $gray: mat-color(mat-palette($mat-gray, 700));
 }
 
 .navbar-alt {
-    border-bottom: 1px solid rgba(97, 97, 97, 0.12);
-
     a {
         p {
             margin: 8px 0 !important;
@@ -89,16 +87,16 @@ $gray: mat-color(mat-palette($mat-gray, 700));
             display: -webkit-flex;
             display: -ms-flexbox;
     
-            flex: row wrap;
+            flex-flow: row;
     
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
     
             position: fixed;
             width: 100%;
             z-index: 999;
     
-            border-bottom: 1px solid rgba($color: $gray, $alpha: 0.12);
+            // border-bottom: 1px solid rgba($color: $gray, $alpha: 0.12);
     
             p {
                 font-family: 'Poppins', sans-serif;
@@ -110,8 +108,30 @@ $gray: mat-color(mat-palette($mat-gray, 700));
                 }
             }
 
+            .title-container {
+                display: flex;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+
+                justify-content: flex-end;
+
+                width: 33%;
+                max-width: 33%;
+            }
+
             .search-container {
-                width: 24%;
+                display: flex;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+
+                width: 432px;
+                max-width: 432px;
+                
+                * {
+                    width: 100%;
+                }
             }
     
             .action-container {
@@ -121,26 +141,43 @@ $gray: mat-color(mat-palette($mat-gray, 700));
                 display: -ms-flexbox;
     
                 flex-flow: row wrap;
-                justify-content: space-around;
+                justify-content: flex-start;
                 align-items: center;
 
-                padding-right: 15%;
+                width: 33%;
+                max-width: 33%;
 
-                .item {
-                    .profile-container {
-                        display: flex;
-                        display: -moz-box;
-                        display: -webkit-flex;
-                        display: -ms-flexbox;
-                        flex-flow: row wrap;
-                        justify-content: center;
-                        align-items: center;
-
-                        img {
-                            margin-right: 8px;
+                .content-card {
+                    .item {
+                        .profile-container {
+                            display: flex;
+                            display: -moz-box;
+                            display: -webkit-flex;
+                            display: -ms-flexbox;
+                            flex-flow: row wrap;
+                            justify-content: center;
+                            align-items: center;
+    
+                            img {
+                                margin-right: 8px;
+                            }
                         }
                     }
                 }
+            }
+
+            .content-card {
+                display: flex;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+    
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+
+                width: 400px;
+                max-width: 400px;
             }
     
             .mat-form-field {

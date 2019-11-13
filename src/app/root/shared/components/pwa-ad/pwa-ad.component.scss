@@ -1,0 +1,43 @@
+@import 'src/assets/styles/scss/placehub.scss';
+
+.ph-ad-container {
+    padding: 0 16px;
+    margin-top: 4vh;
+
+    .mat-card {
+        background: $primary;
+        color: #fff;
+
+        .header {
+            display: flex;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                margin: 0;
+            }
+        }
+
+        .actions {
+            display: flex;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+
+            justify-content: flex-end;
+            align-items: center;
+
+            padding: 4px;
+
+            .mat-flat-button {
+                background-color: #fff;
+                color: $primary;
+                margin-left: 8px;
+            }
+        }
+    }
+}
