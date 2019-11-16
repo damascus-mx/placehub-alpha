@@ -10,6 +10,7 @@ export class AppShellComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('App shell');
   }
 
 }

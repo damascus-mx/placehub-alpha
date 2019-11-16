@@ -1,14 +1,26 @@
 <div class="ph-content mat-app-background">
-    <!-- Desktop stories wrapper -->
+    <!-- Desktop actions+ wrapper -->
     <div class="sidebar">
         <!-- Desktop Stories -->
         <div class="container">
             <div class="action-sidebar-wrapper">
-                <div class="action-sidebar" id="action-top">Option 1</div>
-                <div class="action-sidebar">Option 2</div>
+                <div class="action-sidebar" id="action-top">
+                    <a class="action" routerLink="/">
+                        <mat-icon fontSet="material-icons-outlined">bookmarks</mat-icon>
+                        <b>Saved</b>
+                    </a>
+                </div>
+                <div class="action-sidebar">
+                    <a class="action" routerLink="/">
+                        <mat-icon fontSet="material-icons-outlined">bookmarks</mat-icon>
+                        <b>Payments</b>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Main content -->
     <div class="wrapper">
         <!-- Mobile stories -->
         <div class="stories-wrapper">
