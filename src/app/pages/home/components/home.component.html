@@ -1,29 +1,12 @@
 <div class="ph-content mat-app-background">
     <!-- Desktop stories wrapper -->
     <div class="sidebar">
-        <!-- Ad PWA Desktop -->
-        <div class="ad-container" *ngIf="adState && !mobile">
-            <app-pwa-ad [(adState)]="adState"></app-pwa-ad>
-        </div>
         <!-- Desktop Stories -->
         <div class="container">
-            <mat-card class="stories-wrapper-desktop mat-elevation-z4" style="margin-top: 10px;">
-                <small>Stories</small>
-                <app-stories></app-stories>
-            </mat-card>
-        </div>
-        <!-- Footer -->
-        <div class="footer-wrapper">
-            <div class="useful-links">
-                <small><a [routerLink]="['/about/business']">Placehub for Business</a></small> ·
-                <small><a [routerLink]="['/about/developers']">Developers</a></small> ·
-                <small><a [routerLink]="['/about/jobs']">Careers</a></small> ·
-                <small><a [routerLink]="['/about']">Information</a></small> ·
-                <small><a [routerLink]="['/about/ads']">Ads</a></small> ·
-                <small><a [routerLink]="['/about/privacy']">Privacy</a></small> ·
-                <small><a [routerLink]="['/docs/conditions']">Conditions</a></small>
+            <div class="action-sidebar-wrapper">
+                <div class="action-sidebar" id="action-top">Option 1</div>
+                <div class="action-sidebar">Option 2</div>
             </div>
-            <div style="text-align: center; padding: 8px 0;"><small><b>&copy; 2019 Placehub</b></small></div>
         </div>
     </div>
     <div class="wrapper">
@@ -36,7 +19,7 @@
         <!-- Main content -->
         <div class="main-content" role="main">
             <!-- Top -->
-            <div class="ph-lg-swiper">
+            <div class="ph-lg-swiper" id="main-top">
                 <!-- Component -->
                 <h2 style="margin-top: 0;">Top places</h2>
                 <div class="swiper-wrapper"></div>
@@ -79,16 +62,16 @@
 
     <!-- Desktop stories wrapper -->
     <div class="sidebar">
-        <!-- Ad PWA Desktop -->
-        <div class="ad-container" *ngIf="adState && !mobile">
-            <app-pwa-ad [(adState)]="adState"></app-pwa-ad>
-        </div>
         <!-- Desktop Stories -->
         <div class="container">
             <mat-card class="stories-wrapper-desktop mat-elevation-z4" style="margin-top: 10px;">
                 <small>Stories</small>
                 <app-stories></app-stories>
             </mat-card>
+        </div>
+        <!-- Ad PWA Desktop -->
+        <div class="ad-container" *ngIf="adState && !mobile">
+            <app-pwa-ad [(adState)]="adState"></app-pwa-ad>
         </div>
         <!-- Footer -->
         <div class="footer-wrapper">

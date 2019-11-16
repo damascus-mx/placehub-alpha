@@ -61,7 +61,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
 .active-link {
     mat-icon {
         font-family: 'Material Icons';
-        color: initial;
+        color: inherit;
     }
 }
 
@@ -97,6 +97,7 @@ $gray: mat-color(mat-palette($mat-gray, 700));
             z-index: 999;
     
             // border-bottom: 1px solid rgba($color: $gray, $alpha: 0.12);
+            border-top: 1px solid rgba($color: $gray, $alpha: 0.12);
     
             p {
                 font-family: 'Poppins', sans-serif;

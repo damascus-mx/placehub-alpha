@@ -35,6 +35,104 @@ a { text-decoration: none; color: inherit; }
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
+
+/* Containers */
+.ph-lg-swiper {
+    margin: 16px;
+    white-space: nowrap;
+    max-width: 100%;
+    
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    h2 {
+        display: inline-block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font-size: 2em;
+    }
+
+    .swiper-wrapper {
+        width: inherit;
+        height: 400px;
+        background: $primary;
+        
+        border-radius: 16px;
+    }
+}
+
+.ph-sm-swiper {
+    margin: 16px;
+    white-space: nowrap;
+    max-width: 100%;
+    
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    h2 {
+        display: inline-block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font-size: 2em;
+    }
+
+    .swiper-wrapper {
+        width: inherit;
+        height: 200px;
+        background: $accent;
+        
+        border-radius: 16px;
+    }
+}
+
+.ph-md-swiper {
+    margin: 16px;
+    white-space: nowrap;
+    max-width: 100%;
+    
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    h2 {
+        display: inline-block;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        font-size: 2em;
+    }
+
+    .swiper-wrapper {
+        width: inherit;
+        height: 270px;
+        background: $gray;
+        
+        border-radius: 16px;
+    }
+}
+
 /* MATERIAL DESIGN */
 .mat-raised-button, .mat-button, .mat-flat-button, .mat-stroked-button, .mat-card, 
 .mat-form-field, .mat-list-item, .mat-option, .mat-bottom-sheet-container { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important; }

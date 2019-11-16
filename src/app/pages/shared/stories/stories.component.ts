@@ -13,6 +13,7 @@ export class StoriesComponent implements OnInit {
 
   ngOnInit() {
     this.storiesSwiper = new Swiper('.swiper-container', {
+      // cssMode: true,
       observer: true,
       slidesPerView: 'auto',
       freeMode: true,
@@ -20,6 +21,7 @@ export class StoriesComponent implements OnInit {
       resizeReInit: true,
       preloadImages: false,
       watchSlidesVisibility: false,
+      // mousewheel: true,
       lazy: {
         loadPrevNext: true,
         loadPrevNextAmount: 10,

@@ -1,7 +1,4 @@
 @import 'src/assets/styles/scss/placehub.scss';
-@include mat-core();
-
-$gray: mat-color(mat-palette($mat-gray, A400));
 
 .ph-content {
     display: flex;
@@ -41,101 +38,6 @@ $gray: mat-color(mat-palette($mat-gray, A400));
 
 .main-content {
     width: 100%;
-    .ph-lg-swiper {
-        margin: 16px;
-        white-space: nowrap;
-        max-width: 100%;
-        
-        display: flex;
-        display: -moz-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        flex-direction: column;
-
-        text-overflow: ellipsis;
-        overflow: hidden;
-
-        h2 {
-            display: inline-block;
-            flex-grow: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            font-size: 2em;
-        }
-
-        .swiper-wrapper {
-            width: inherit;
-            height: 400px;
-            background: $primary;
-            
-            border-radius: 16px;
-        }
-    }
-
-    .ph-sm-swiper {
-        margin: 16px;
-        white-space: nowrap;
-        max-width: 100%;
-        
-        display: flex;
-        display: -moz-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        flex-direction: column;
-
-        text-overflow: ellipsis;
-        overflow: hidden;
-
-        h2 {
-            display: inline-block;
-            flex-grow: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            font-size: 2em;
-        }
-
-        .swiper-wrapper {
-            width: inherit;
-            height: 200px;
-            background: $accent;
-            
-            border-radius: 16px;
-        }
-    }
-
-    .ph-md-swiper {
-        margin: 16px;
-        white-space: nowrap;
-        max-width: 100%;
-        
-        display: flex;
-        display: -moz-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        flex-direction: column;
-
-        text-overflow: ellipsis;
-        overflow: hidden;
-
-        h2 {
-            display: inline-block;
-            flex-grow: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            font-size: 2em;
-        }
-
-        .swiper-wrapper {
-            width: inherit;
-            height: 270px;
-            background: $gray;
-            
-            border-radius: 16px;
-        }
-    }
 }
 
 .stories-wrapper-desktop {
@@ -195,9 +97,39 @@ $gray: mat-color(mat-palette($mat-gray, A400));
 
         small {
             margin: 0;
-            padding: 0 0 16px 16px;
+            padding: 4px 0 16px 24px;
             font-weight: 700;
             font-size: large;
+        }
+    }
+
+    .action-sidebar-wrapper {
+        display: flex;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        max-width: 400px;
+        margin-top: 10px;
+
+        .action-sidebar {
+            padding: 16px 0;
+            display: flex;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+
+            justify-content: flex-end;
+
+            width: 400px;
+        }
+
+        #action-top {
+            padding: 0;
         }
     }
 
@@ -211,10 +143,10 @@ $gray: mat-color(mat-palette($mat-gray, A400));
 
         height: 90vh;
         max-height: 85vh;
-        padding-top: 15vh;
+        padding-top: 90px;
 
         .container {
-            margin: 2vh 0 0 0;
+            margin: 62px 0 0 0;
             max-width: 400px;
         }
 
@@ -225,9 +157,8 @@ $gray: mat-color(mat-palette($mat-gray, A400));
             display: -ms-flexbox;
             flex-flow: column wrap;
 
-            padding: 4px 8px;
+            padding: 20px 8px;
 
-            width: 400px;
             max-width: 400px;
 
             * {
@@ -242,12 +173,15 @@ $gray: mat-color(mat-palette($mat-gray, A400));
 
     .main-content {
         max-width: 432px;
-        height: 90vh;
-        max-height: 90vh;
-        padding-top: 10vh;
+        height: 100vh;
+        max-height: 100vh;
 
         overflow: auto;
         scrollbar-width: none;
+
+        #main-top {
+            margin-top: 100px;
+        }
     }
 
     .main-content::-webkit-scrollbar {

@@ -1,7 +1,4 @@
 @import 'src/assets/styles/scss/placehub.scss';
-@include mat-core();
-
-$gray: mat-color(mat-palette($mat-gray, 400));
 
 .nav-bar {
     display: flex;
